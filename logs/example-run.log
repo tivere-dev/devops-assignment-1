@@ -1,0 +1,23 @@
+# Example log entries captured from a real session of the three scripts.
+# Live logs are written to logs/system-info.log, logs/disk-check.log and logs/network-check.log.
+
+## system-info.log
+[2026-09-15 23:08:50] [INFO] system-info started by user
+[2026-09-15 23:08:51] [INFO] system-info completed successfully (host=Users-MacBook-Pro.local, kernel=22.6.0)
+
+## disk-check.log
+[2026-09-15 23:08:51] [INFO] disk check started (path=/, threshold=80%)
+[2026-09-15 23:08:51] [INFO] OK path=/ usage=8% threshold=80%
+[2026-09-15 23:08:51] [ERROR] invalid input: threshold 'abc' is not a whole number
+
+## network-check.log
+[2026-09-15 23:08:52] [INFO] network check started (host=localhost)
+[2026-09-15 23:08:52] [INFO] resolved host=localhost address=127.0.0.1
+[2026-09-15 23:08:53] [INFO] ping succeeded host=localhost
+[2026-09-15 23:08:53] [INFO] network check completed successfully host=localhost
+[2026-09-15 23:08:53] [ERROR] invalid input: port must be between 1 and 65535 (got 65536)
+[2026-09-15 23:08:53] [INFO] network check started (host=example.com, port=443)
+[2026-09-15 23:08:53] [INFO] resolved host=example.com address=104.20.23.154
+[2026-09-15 23:08:54] [INFO] ping succeeded host=example.com
+[2026-09-15 23:08:54] [INFO] tcp open host=example.com port=443
+[2026-09-15 23:08:54] [INFO] network check completed successfully host=example.com port=443
