@@ -117,7 +117,7 @@ All scripts accept `-h` / `--help`.
 |--------|---|---|---|---|
 | `system-info.sh` | information collected | – | unexpected argument | – |
 | `disk-check.sh` | usage below threshold | usage reached/exceeded threshold | invalid threshold or path | `df` could not report usage |
-| `network-check.sh` | host resolved and reachable (and port open, if given) | resolution, ping or TCP failure | missing/invalid host or port | – |
+| `network-check.sh` | host resolved and reachable (and port open, if given) | resolution, ping or TCP failure | missing/invalid host (incl. out-of-range IPv4 such as `999.1.1.1`) or port | – |
 
 Invalid input (for example `abc`, `0`, `101`, `1.5`, `-1`, a missing argument, a
 non-existent path, a port outside 1–65535) always produces exit code 2 with a usage
